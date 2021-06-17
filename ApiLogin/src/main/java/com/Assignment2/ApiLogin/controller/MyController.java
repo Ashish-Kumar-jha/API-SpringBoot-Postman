@@ -2,6 +2,7 @@ package com.Assignment2.ApiLogin.controller;
 
 import com.Assignment2.ApiLogin.Entity.DataClass;
 import com.Assignment2.ApiLogin.Entity.EventClass;
+import com.Assignment2.ApiLogin.Entity.RegisteredEvent;
 import com.Assignment2.ApiLogin.Services.Servicees;
 import jdk.jfr.Event;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -63,6 +64,11 @@ public class MyController {
     @GetMapping("/events")
     public List<EventClass> showEvent(){
         return this.service.showEvent();
+    }
+
+    @PostMapping("/eventreg/{Uid}/{EventId}")
+    public String registerEvent( @PathVariable String Uid, @PathVariable String EventId){
+        return this.service.registerEvent(Integer.parseInt(Uid),Integer.parseInt(EventId));
     }
 
 }
