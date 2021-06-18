@@ -20,7 +20,12 @@ public interface Servicees {
     public List<EventClass> showEvent();
 
     //Event Registration
-    public String registerEvent(int uid, int evid);
+      public String registerEvent(int uid, int evid);
+  //  public String registerEvent(RegisteredEvent regev,int eid);
+
+
+
     //Show Events for specific user
     public List<RegisteredEvent> ShowEventForId(int uid);
+   public List<RegisteredEvent> RegisterdTable();
 }

@@ -68,16 +68,29 @@ public class ServiceImpl implements Servicees {
     public String loginValid(DataClass data) {
         String conf="";
         boolean auth=false;
-        for(DataClass d:datadao.findAll()){
-            if(d.getId()==data.getId() && d.getPassword().equals(data.getPassword())){
-                conf+="Welcome "+d.getName()+" ";
-                auth=true;
-                break;
+       for(DataClass d:datadao.findAll()){
+//            if(d.getId()==data.getId() && d.getPassword().equals(data.getPassword())){
+//                conf+="Welcome "+d.getName()+" ";
+//                auth=true;
+//                break;
+//            }
+            if(d.getId()==data.getId()){
+                if(d.getPassword().equals(data.getPassword()))
+                {
+                    conf+="Welcome "+d.getName()+" "+"Your Registered Mail Id Is "+d.getEmail();
+                    auth=true;
+                    break;
+                }
+//                else{
+//                    return "INVALID PASSWORD";
+//                }
             }
+//            else{
+//                return "INVALID USER";
+//            }
         }
         if(auth)
             return conf;
-
         return "NOT A VALID USER";
     }
 
@@ -141,6 +154,70 @@ public class ServiceImpl implements Servicees {
     }
 
 
+
+
+
+
+
+
+//
+//    @Override
+//    public String registerEvent( RegisteredEvent regev, int eid) {
+//        int uid=0;
+//        for(RegisteredEvent r: registeredeventdao.findAll()){
+//            if(r.getUsid()==regev.getUsid()){
+//                uid=r.getUsid();
+//                break;
+//            }
+//        }
+//
+//
+//        DataClass dc=null;
+//        boolean user,event;
+//        event=user=false;
+//        for(DataClass d:datadao.findAll()){
+//            if(d.getId()==uid)
+//            {
+//                dc=d;
+//                user=true;
+//                break;
+//            }
+//        }
+//        EventClass ec=null;
+//        for(EventClass e:eventdao.findAll()){
+//            if(e.getEventId()==eid)
+//            {
+//                ec=e;
+//                event=true;
+//                break;
+//            }
+//        }
+//
+//        String name="";
+//        if(user==true && event==true)
+//        {
+//            for(EventClass ee: eventdao.findAll()){
+//                if(ee.getEventId()==eid){
+//                    name=(ee.getEventName());
+//                }
+//            }
+//
+//            // name=name.concat(" | ").concat(prev);
+//            RegisteredEvent rr=new RegisteredEvent(uid,name);
+//            registeredeventdao.save(rr);
+//            return "REGISTERED SUCCESSFULLY FOR "+ " "+name;
+//        }
+//        return "CHECK EVENT ID/ USER ID";
+//    }
+
+
+
+
+
+
+
+
+
     //SHOW EVENTS FOR SPECIFIC USER ID
     @Override
     public List<RegisteredEvent> ShowEventForId(int uid) {
@@ -151,6 +228,11 @@ public class ServiceImpl implements Servicees {
             }
         }
         return r;
+    }
+
+    @Override
+    public List<RegisteredEvent> RegisterdTable() {
+        return registeredeventdao.findAll();
     }
 
 

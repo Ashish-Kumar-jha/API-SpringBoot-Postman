@@ -22,9 +22,9 @@ private String evName;
         this.evName = evName;
     }
 
-//    public int getEvid() {
-//        return evid;
-//    }
+    public int getEvid() {
+        return evid;
+    }
 
     public int getUsid() {
         return Usid;
@@ -34,9 +34,9 @@ private String evName;
         return evName;
     }
 
-//    public void setEvid(int evid) {
-//        this.evid = evid;
-//    }
+    public void setEvid(int evid) {
+        this.evid = evid;
+    }
 
     public void setUsid(int usid) {
         Usid = usid;

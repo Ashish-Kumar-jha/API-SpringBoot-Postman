@@ -68,14 +68,29 @@ public class MyController {
     public List<EventClass> showEvent(){
         return this.service.showEvent();
     }
+
+    /*-----------------------------------------------------------------------------------------------------------------*/
     //REGISTER EVENT FOR SPECIFIC ID
-    @PutMapping("/eventreg/{Uid}/{EventId}")
+    @PostMapping("/eventReg/{Uid}/{EventId}")
     public String registerEvent( @PathVariable String Uid, @PathVariable String EventId){
         return this.service.registerEvent(Integer.parseInt(Uid),Integer.parseInt(EventId));
     }
+//
+//    @PostMapping("/eventreg/{eid}")
+//    public String registerEvent(@RequestBody RegisteredEvent regev, @PathVariable String eid){
+//        return this.service.registerEvent(regev,Integer.parseInt(eid)) ;
+//    }
+
+
+
+
     @GetMapping("/{uid}")
     public List<RegisteredEvent> showEventForId(@PathVariable String uid){
         return this.service.ShowEventForId(Integer.parseInt(uid));
+    }
+    @GetMapping("/RegisterdTable")
+    public List<RegisteredEvent> RegisterdTable(){
+        return this.service.RegisterdTable();
     }
 
 }
