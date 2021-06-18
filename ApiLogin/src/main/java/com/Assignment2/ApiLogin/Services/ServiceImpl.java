@@ -132,8 +132,8 @@ public class ServiceImpl implements Servicees {
                    prev=fetch.getEvName();
                }
            }
-           name=name.concat(" | ").concat(prev);
-            RegisteredEvent rr=new RegisteredEvent(evid,uid,name);
+          // name=name.concat(" | ").concat(prev);
+            RegisteredEvent rr=new RegisteredEvent(uid,name);
             registeredeventdao.save(rr);
             return "REGISTERED SUCCESSFULLY FOR "+ " "+name;
         }
@@ -143,11 +143,11 @@ public class ServiceImpl implements Servicees {
 
     //SHOW EVENTS FOR SPECIFIC USER ID
     @Override
-    public RegisteredEvent ShowEventForId(int uid) {
-        RegisteredEvent r=null;
+    public List<RegisteredEvent> ShowEventForId(int uid) {
+        List<RegisteredEvent> r=new ArrayList<RegisteredEvent>();
         for(RegisteredEvent rr: registeredeventdao.findAll()){
             if(rr.getUsid()==uid){
-                r=rr;
+                r.add(rr);
             }
         }
         return r;

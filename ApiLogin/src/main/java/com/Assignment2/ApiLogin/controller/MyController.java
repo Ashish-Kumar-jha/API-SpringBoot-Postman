@@ -16,7 +16,7 @@ public class MyController {
     @Autowired
     private Servicees service;
 
-
+/*---------------------------------------------------------------------------------------------------------------------*/
     //Get the User
     @GetMapping("/user")
     public List<DataClass> getUser()
@@ -24,7 +24,7 @@ public class MyController {
         return this.service.getUser();
     }
 
-    //Get the single course
+    //GET DETAILS OF USER ON THE BASIS OF ID
     @GetMapping("/user/{userId}")
     public DataClass getCourse(@PathVariable String userId)
     {
@@ -32,19 +32,19 @@ public class MyController {
     }
 
 
-    //Add courses or PUT operation
+    //REGISTER(Add) USER or POST operation
     @PostMapping("/user")
     public DataClass addCourse(@RequestBody DataClass userdata) {
         return this.service.addUser(userdata);
     }
 
-    //update data or PUT operation
+    //UPDATE USER DATA OR PUT OPERTION
     @PutMapping("/user/{user}")
     public DataClass UpdateCourse(@RequestBody DataClass data ){
         return this.service.updateUser(data);
     }
 
-    //DELETE data or DELETE operation
+    //DELETEUSER DATA OR DELETE operation
     @DeleteMapping("/user/{userId}")
     public void deleteCourse(@PathVariable String userId){
         this.service.deleteUser(Integer.parseInt(userId));
@@ -52,7 +52,8 @@ public class MyController {
 
 
     /*----------------------------------------------------------------------------------------------------------------*/
-    //FOR LOGIN VALIDATION
+
+    //FOR LOGIN VALIDATION ADDING ID AND PASSWORD IN BODY
     @PostMapping("/login")
     public String loginvalid(@RequestBody DataClass data){
         return this.service.loginValid(data);
@@ -68,12 +69,12 @@ public class MyController {
         return this.service.showEvent();
     }
     //REGISTER EVENT FOR SPECIFIC ID
-    @PostMapping("/eventreg/{Uid}/{EventId}")
+    @PutMapping("/eventreg/{Uid}/{EventId}")
     public String registerEvent( @PathVariable String Uid, @PathVariable String EventId){
         return this.service.registerEvent(Integer.parseInt(Uid),Integer.parseInt(EventId));
     }
     @GetMapping("/{uid}")
-    public RegisteredEvent showEventForId(@PathVariable String uid){
+    public List<RegisteredEvent> showEventForId(@PathVariable String uid){
         return this.service.ShowEventForId(Integer.parseInt(uid));
     }
 

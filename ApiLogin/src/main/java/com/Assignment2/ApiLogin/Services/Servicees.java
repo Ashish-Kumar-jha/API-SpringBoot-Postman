@@ -22,5 +22,5 @@ public interface Servicees {
     //Event Registration
     public String registerEvent(int uid, int evid);
     //Show Events for specific user
-    public RegisteredEvent ShowEventForId(int uid);
+    public List<RegisteredEvent> ShowEventForId(int uid);
 }
