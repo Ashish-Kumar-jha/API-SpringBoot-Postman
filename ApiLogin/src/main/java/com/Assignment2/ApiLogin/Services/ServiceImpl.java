@@ -97,7 +97,6 @@ public class ServiceImpl implements Servicees {
 /*EVENT REGISTRATION*/
     @Override
     public String registerEvent(int uid,int evid) {
-
         DataClass dc=null;
         boolean user,event;
         event=user=false;
@@ -120,8 +119,8 @@ public class ServiceImpl implements Servicees {
         }
 
         String name="";
-        if(user==true && event==true){
-
+        if(user==true && event==true)
+        {
            for(EventClass ee: eventdao.findAll()){
                if(ee.getEventId()==evid){
                    name=(ee.getEventName());
@@ -133,18 +132,25 @@ public class ServiceImpl implements Servicees {
                    prev=fetch.getEvName();
                }
            }
-           name+=" | "+prev;
-           //list.add(name);
-            RegisteredEvent rr=new RegisteredEvent(uid,evid,name);
-//            rr.setUsid(uid);
-//            rr.setEvid(evid);
-//            rr.setEvName(name);
-                    registeredeventdao.save(rr);
+           name=name.concat(" | ").concat(prev);
+            RegisteredEvent rr=new RegisteredEvent(evid,uid,name);
+            registeredeventdao.save(rr);
             return "REGISTERED SUCCESSFULLY FOR "+ " "+name;
         }
+        return "CHECK EVENT ID/ USER ID";
+    }
 
 
-return "CHECK EVENT ID/ USER ID";
+    //SHOW EVENTS FOR SPECIFIC USER ID
+    @Override
+    public RegisteredEvent ShowEventForId(int uid) {
+        RegisteredEvent r=null;
+        for(RegisteredEvent rr: registeredeventdao.findAll()){
+            if(rr.getUsid()==uid){
+                r=rr;
+            }
+        }
+        return r;
     }
 
 
