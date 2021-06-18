@@ -44,7 +44,7 @@ public class MyController {
         return this.service.updateUser(data);
     }
 
-    //DELETEUSER DATA OR DELETE operation
+    //DELETE USER DATA OR DELETE operation
     @DeleteMapping("/user/{userId}")
     public void deleteCourse(@PathVariable String userId){
         this.service.deleteUser(Integer.parseInt(userId));
