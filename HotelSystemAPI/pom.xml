@@ -8,11 +8,11 @@
 		<version>2.5.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.Assignment2</groupId>
-	<artifactId>ApiLogin</artifactId>
+	<groupId>com.example.HotelSystem</groupId>
+	<artifactId>HotelSystemAPI</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>ApiAssignment</name>
-	<description>Spring Boot API Assignment</description>
+	<name>HotelSystem</name>
+	<description> hotel system manages information about staff, rooms, reservations, customers, customer service (food deliver in rooms) and customer billing.   Prepare a document listing the APIs and functionalities you are going to cover.   State your assumptions as needed. Staff management Room Booking Customer Orders Invoice systems</description>
 	<properties>
 		<java.version>16</java.version>
 	</properties>
@@ -32,8 +32,6 @@
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
-
-
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
