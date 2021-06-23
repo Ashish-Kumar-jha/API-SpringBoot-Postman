@@ -12,36 +12,26 @@ public class StaffEntity {
     String staffemail;
     String staffpassword;
     int staffage;
+    long staffpno;
+    String stafflocation;
+
+
+
+    public StaffEntity(String staffemail, String staffpassword, int staffage, long staffpno, String stafflocation) {
+        this.staffemail = staffemail;
+        this.staffpassword = staffpassword;
+        this.staffage = staffage;
+        this.staffpno = staffpno;
+        this.stafflocation = stafflocation;
+    }
+    public StaffEntity() {
+    }
+
+
 
     public long getStaffpno() {
         return staffpno;
     }
-
-    public void setStaffpno(long staffpno) {
-        this.staffpno = staffpno;
-    }
-
-    long staffpno;
-    String stafflocation;
-
-    public StaffEntity() {
-    }
-
-    public StaffEntity(String staffemail, String staffpassword, int staffage, String stafflocation) {
-        this.staffemail = staffemail;
-        this.staffpassword = staffpassword;
-        this.staffage = staffage;
-        this.stafflocation = stafflocation;
-    }
-
-   /* public int getStaffid() {
-        return staffid;
-    }
-
-    public void setStaffid(int staffid) {
-        this.staffid = staffid;
-    }*/
-
     public String getStaffemail() {
         return staffemail;
     }
@@ -72,5 +62,9 @@ public class StaffEntity {
 
     public void setStafflocation(String stafflocation) {
         this.stafflocation = stafflocation;
+    }
+    public void setStaffpno(long staffpno)
+    {
+        this.staffpno = staffpno;
     }
 }

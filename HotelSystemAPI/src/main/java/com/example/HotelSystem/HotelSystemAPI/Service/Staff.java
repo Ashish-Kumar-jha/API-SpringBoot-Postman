@@ -7,8 +7,7 @@ import java.util.List;
 
 public interface Staff {
     public List<StaffEntity> showStaffs();
-
     public StaffEntity addStaffs(StaffEntity staffbody);
-
-    public StaffEntity deleteStaff(String staffemail);
+    public String deleteStaff(String staffemail);
+    public StaffEntity updateStaff(StaffEntity staffbody,String staffEmail);
 }
