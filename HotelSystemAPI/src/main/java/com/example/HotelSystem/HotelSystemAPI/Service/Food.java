@@ -1,6 +1,7 @@
 package com.example.HotelSystem.HotelSystemAPI.Service;
 
 import com.example.HotelSystem.HotelSystemAPI.Entity.FoodEntity;
+import com.example.HotelSystem.HotelSystemAPI.Entity.FoodOrderTableEntity;
 
 import java.util.List;
 
@@ -9,4 +10,10 @@ public interface Food {
    public FoodEntity addFoods(FoodEntity foodbody);
    public String deleteFood(int parseInt);
    public FoodEntity updateFood(FoodEntity foodbody, int parseInt);
+
+
+
+   public List<FoodOrderTableEntity> showFoodBook();
+   public FoodOrderTableEntity addFoodBook(FoodOrderTableEntity foodorderobj);
+   public List<FoodOrderTableEntity> showFoodBookUser(int id);
 }

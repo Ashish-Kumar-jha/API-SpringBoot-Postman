@@ -1,15 +1,21 @@
 package com.example.HotelSystem.HotelSystemAPI.Service;
 
 import com.example.HotelSystem.HotelSystemAPI.Dao.FoodDao;
+import com.example.HotelSystem.HotelSystemAPI.Dao.FoodOrderTableDao;
 import com.example.HotelSystem.HotelSystemAPI.Entity.FoodEntity;
+import com.example.HotelSystem.HotelSystemAPI.Entity.FoodOrderTableEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 @Service
 public class FoodImpl implements  Food{
     @Autowired
     FoodDao fooddao;
+
+    @Autowired
+    FoodOrderTableDao foodorderdao;
 
     //SHOW ALL FOOD ITEM
     @Override
@@ -34,5 +40,39 @@ public class FoodImpl implements  Food{
     @Override
     public FoodEntity updateFood(FoodEntity foodbody, int parseInt) {
         return fooddao.save(foodbody);
+    }
+
+
+    /*****************FOOD ORDER**************/
+    @Override
+    public List<FoodOrderTableEntity> showFoodBook() {
+        return foodorderdao.findAll();
+    }
+
+    @Override
+    public FoodOrderTableEntity addFoodBook(FoodOrderTableEntity foodorderobj) {
+        String foodname=foodorderobj.getFoodname();
+        int price=0;
+        int noofpice=foodorderobj.getNoofpice();
+        for(FoodEntity fe:fooddao.findAll()){
+            if(fe.getItemname().equalsIgnoreCase(foodname)){
+                price=fe.getPrice();
+                break;
+            }
+        }
+        foodorderobj.setPrice(price*noofpice);
+        return foodorderdao.save(foodorderobj);
+    }
+
+    @Override
+    public List<FoodOrderTableEntity> showFoodBookUser(int id) {
+        List<FoodOrderTableEntity> ee=new ArrayList<FoodOrderTableEntity>();
+
+        for(FoodOrderTableEntity e:foodorderdao.findAll()){
+            if(e.getBid()==id){
+                ee.add(e);
+            }
+        }
+        return ee;
     }
 }
