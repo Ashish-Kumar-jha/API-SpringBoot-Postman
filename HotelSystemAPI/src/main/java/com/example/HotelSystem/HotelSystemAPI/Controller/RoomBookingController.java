@@ -5,6 +5,7 @@ import com.example.HotelSystem.HotelSystemAPI.Service.RoomBook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -24,7 +25,7 @@ public class RoomBookingController {
 
     //ADD CUSTOMER TO HOTEL LIST
     @PostMapping("/booking")
-    public RoomBookingEntity addCustomer(@RequestBody RoomBookingEntity roomobj){
+    public RoomBookingEntity addCustomer(@Valid  @RequestBody RoomBookingEntity roomobj){
         return this.room.addCustomer(roomobj);
     }
 

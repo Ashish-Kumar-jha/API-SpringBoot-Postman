@@ -26,6 +26,7 @@ public class InvoiceCheckoutImpl implements  InvoiceCheckout {
     @Autowired
     FoodOrderTableDao fooddao;
 
+    //SHOW ALL INVOICE
     @Override
     public List<InvoiceCheckoutEntity> showAllInvoice() {
         return invdao.findAll();

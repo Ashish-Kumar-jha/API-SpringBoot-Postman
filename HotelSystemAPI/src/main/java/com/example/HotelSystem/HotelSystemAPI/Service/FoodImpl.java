@@ -59,6 +59,7 @@ public class FoodImpl implements  Food{
                 price=fe.getPrice();
                 break;
             }
+
         }
         foodorderobj.setPrice(price*noofpice);
         return foodorderdao.save(foodorderobj);

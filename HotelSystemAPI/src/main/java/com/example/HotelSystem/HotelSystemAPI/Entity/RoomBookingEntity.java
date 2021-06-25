@@ -4,13 +4,16 @@ import org.springframework.lang.NonNull;
 import org.springframework.validation.annotation.Validated;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
-
+@Validated
 @Entity
 public class RoomBookingEntity {
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
 int bid;
+@NotBlank(message = "empty")
 String cname;
 int cage;
 String caadhaar;
