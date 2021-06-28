@@ -2,8 +2,11 @@ package com.example.HotelSystem.HotelSystemAPI.Controller;
 
 import com.example.HotelSystem.HotelSystemAPI.Entity.FoodEntity;
 import com.example.HotelSystem.HotelSystemAPI.Entity.FoodOrderTableEntity;
+import com.example.HotelSystem.HotelSystemAPI.Entity.httpcheck;
 import com.example.HotelSystem.HotelSystemAPI.Service.Food;
+import com.example.HotelSystem.HotelSystemAPI.Service.http;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -12,7 +15,6 @@ import java.util.List;
 public class FoodController {
     @Autowired
     Food food;
-    @Autowired
 
     @GetMapping("/food/showfoods")
     public List<FoodEntity> showFoods()
@@ -43,7 +45,6 @@ public class FoodController {
     {
         return this.food.showFoodBookUser(id);
     }
-
 
 
     @GetMapping("/foodbook/showfoodbook")

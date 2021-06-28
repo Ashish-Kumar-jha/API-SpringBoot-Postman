@@ -2,8 +2,10 @@ package com.example.HotelSystem.HotelSystemAPI.Service;
 
 import com.example.HotelSystem.HotelSystemAPI.Dao.FoodDao;
 import com.example.HotelSystem.HotelSystemAPI.Dao.FoodOrderTableDao;
+import com.example.HotelSystem.HotelSystemAPI.Dao.httpcheckdao;
 import com.example.HotelSystem.HotelSystemAPI.Entity.FoodEntity;
 import com.example.HotelSystem.HotelSystemAPI.Entity.FoodOrderTableEntity;
+import com.example.HotelSystem.HotelSystemAPI.Entity.httpcheck;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -74,6 +76,13 @@ public class FoodImpl implements  Food{
                 ee.add(e);
             }
         }
+        if(ee.isEmpty()){
+            return null;
+        }
         return ee;
     }
+
+
+
+
 }

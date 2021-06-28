@@ -13,16 +13,20 @@ public class RoomBookingEntity {
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
 int bid;
-@NotBlank(message = "empty")
+@Column(nullable = false)
 String cname;
+@Column(nullable = false)
 int cage;
+@Column(nullable = false)
 String caadhaar;
+@Column(nullable = false)
 String email;
+@Column(nullable = false)
 long contact;
 String roomtype;
 
 
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern ="dd-MM-yyyy")
+@JsonFormat(shape = JsonFormat.Shape.STRING, pattern ="dd-MM-yyyy")
 private LocalDate checkin;
 @JsonFormat(shape = JsonFormat.Shape.STRING, pattern ="dd-MM-yyyy")
 private LocalDate checkout;

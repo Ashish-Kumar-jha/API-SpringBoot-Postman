@@ -41,7 +41,6 @@ public class InvoiceCheckoutImpl implements  InvoiceCheckout {
                 break;
             }
         }
-
         return ie;
     }
 
@@ -49,15 +48,20 @@ public class InvoiceCheckoutImpl implements  InvoiceCheckout {
     public InvoiceCheckoutEntity generateInvoice(int id) {
 
         int bid = id;
-        String roomtype = "";
-        int roomprice = 0;
-        int foodprice = 0;
-        long noofdays = 0;
+        boolean check=false;
+        String roomtype ="";
+        int roomprice=0;
+        int foodprice=0;
+        long noofdays=0;
 
         for (RoomBookingEntity re : roomdao.findAll()) {
             if (re.getBid() == bid) {
                 roomtype = re.getRoomtype();
+                check=true;
                 break;
+            }
+            else{
+                check=false;
             }
         }
         for (RoomTypeEntity re : rtdao.findAll()) {
@@ -80,6 +84,11 @@ public class InvoiceCheckoutImpl implements  InvoiceCheckout {
             }
 
         }
+   if(check==false){
+       InvoiceCheckoutEntity obj=null;
+       return obj;
+   }
+
         int total = (int) (noofdays * roomprice) + foodprice;
         InvoiceCheckoutEntity obj = new InvoiceCheckoutEntity(bid, roomtype, roomprice, foodprice, noofdays, total);
         return invdao.save(obj);
