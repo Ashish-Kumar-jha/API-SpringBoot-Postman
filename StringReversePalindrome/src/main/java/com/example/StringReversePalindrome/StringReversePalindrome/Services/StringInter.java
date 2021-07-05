@@ -4,7 +4,7 @@ import com.example.StringReversePalindrome.StringReversePalindrome.StringClasses
 
 public interface StringInter {
 
-   StringClass ReverseStr(StringClass strobj);
+    StringClass ReverseStr(StringClass strobj);
 
     StringClass Reversewordstr(StringClass obj);
 }

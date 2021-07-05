@@ -2,12 +2,12 @@ package com.example.StringReversePalindrome.StringReversePalindrome.Services;
 
 import com.example.StringReversePalindrome.StringReversePalindrome.StringClasses.StringClass;
 import org.springframework.stereotype.Service;
-
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class StringIntrImpl implements StringInter{
+public class StringIntrImpl implements StringInter {
+
     @Override
     public StringClass ReverseStr(StringClass strobj) {
 
@@ -35,6 +35,8 @@ public class StringIntrImpl implements StringInter{
         return strobj;
     }
 
+
+
     @Override
     public StringClass Reversewordstr(StringClass obj) {
         String arr[]=obj.getSentence().split(" ");
@@ -50,6 +52,7 @@ public class StringIntrImpl implements StringInter{
                 pos.add(i);
             }
         }
+        //Reversing words of sentence using two pointers approach
         while(start<end){
             String x=arr[start];
             arr[start]=arr[end];
@@ -71,6 +74,7 @@ public class StringIntrImpl implements StringInter{
             }
         }
 
+        //saving data to the given object using setters of entity class
         obj.setSentence(temp);
         obj.setPos(pos);
         return obj;
