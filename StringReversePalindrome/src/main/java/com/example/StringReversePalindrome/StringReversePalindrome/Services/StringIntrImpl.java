@@ -21,7 +21,7 @@ public class StringIntrImpl implements StringInter {
              sb.reverse();
              Palinarr[i]=sb.toString();
             if(sb.toString().equalsIgnoreCase(temp)){
-                pos.add(i);
+                pos.add(i+1);
             }
         }
         char ch[]=s.toCharArray();
@@ -49,7 +49,7 @@ public class StringIntrImpl implements StringInter {
             sb.reverse();
 
             if(sb.toString().equalsIgnoreCase(s)){
-                pos.add(i);
+                pos.add(i+1);
             }
         }
         //Reversing words of sentence using two pointers approach
