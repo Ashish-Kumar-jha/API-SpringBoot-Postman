@@ -26,15 +26,8 @@ public class EmployeeServices implements Employee {
                 row=br.readLine();
 
               while((row=br.readLine())!=null && count<pageSize){
-                EmployeeData emp=new EmployeeData();
                 String[] data=row.split(",");
-                emp.setId(data[0]);
-                emp.setName(data[2]);
-                emp.setEmail(data[6]);
-                emp.setSalary(data[25]);
-                emp.setCity(data[31]);
-                emp.setState(data[32]);
-                emp.setCountry(data[30]);
+                  EmployeeData emp=new EmployeeData(data[0],data[2],data[6],data[25],data[31],data[32],data[30]);
                 Empdata.add(emp);
                 count++;
             }
