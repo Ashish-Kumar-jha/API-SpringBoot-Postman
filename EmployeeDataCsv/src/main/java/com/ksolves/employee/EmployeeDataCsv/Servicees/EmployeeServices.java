@@ -21,6 +21,7 @@ public class EmployeeServices implements Employee {
         {
             BufferedReader br=new BufferedReader(new FileReader("E:\\Hr1m.csv"));
             int count=0;
+            row=br.readLine();
               for(int i=0;i<(pageNo-1)*pageSize;i++)
                 row=br.readLine();
 
@@ -28,7 +29,7 @@ public class EmployeeServices implements Employee {
                 EmployeeData emp=new EmployeeData();
                 String[] data=row.split(",");
                 emp.setId(data[0]);
-                emp.setName(data[1]);
+                emp.setName(data[2]);
                 emp.setEmail(data[6]);
                 emp.setSalary(data[25]);
                 emp.setCity(data[31]);
