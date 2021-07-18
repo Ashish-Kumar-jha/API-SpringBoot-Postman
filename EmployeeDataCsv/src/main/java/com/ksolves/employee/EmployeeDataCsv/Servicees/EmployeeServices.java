@@ -22,14 +22,18 @@ public class EmployeeServices implements Employee {
             BufferedReader br=new BufferedReader(new FileReader("E:\\Hr1m.csv"));
             int count=0;
             row=br.readLine();
-              for(int i=0;i<(pageNo-1)*pageSize;i++)
-                row=br.readLine();
+            if((pageNo-1)*pageSize>=0 && (pageNo-1)*pageSize<=100000) {
 
-              while((row=br.readLine())!=null && count<pageSize){
-                String[] data=row.split(",");
-                  EmployeeData emp=new EmployeeData(data[0],data[2],data[6],data[25],data[31],data[32],data[30]);
-                Empdata.add(emp);
-                count++;
+
+                for (int i = 0; i < (pageNo - 1) * pageSize; i++)
+                    row = br.readLine();
+
+                while ((row = br.readLine()) != null && count < pageSize) {
+                    String[] data = row.split(",");
+                    EmployeeData emp = new EmployeeData(data[0], data[2], data[6], data[25], data[31], data[32], data[30]);
+                    Empdata.add(emp);
+                    count++;
+                }
             }
         }
         catch(Exception e){
