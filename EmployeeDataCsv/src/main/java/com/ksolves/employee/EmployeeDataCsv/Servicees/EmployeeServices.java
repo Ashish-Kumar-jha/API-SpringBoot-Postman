@@ -1,5 +1,6 @@
 package com.ksolves.employee.EmployeeDataCsv.Servicees;
 
+import com.ksolves.employee.EmployeeDataCsv.Controllers.EmployeeController;
 import com.ksolves.employee.EmployeeDataCsv.Models.EmployeeData;
 import com.ksolves.employee.EmployeeDataCsv.Models.Request;
 import org.springframework.stereotype.Service;
@@ -13,6 +14,8 @@ import java.util.List;
 public class EmployeeServices implements Employee {
     @Override
     public List<EmployeeData> fetchdata(Request reqObj) {
+        org.slf4j.Logger log= org.slf4j.LoggerFactory.getLogger(EmployeeServices.class);
+        log.info("INSIDE SERVICE CLASS -- FETCH DATA");
         int pageNo=reqObj.getPageNo();
         int pageSize=reqObj.getPageSize();
         List<EmployeeData> Empdata= new ArrayList<EmployeeData>();
@@ -23,8 +26,6 @@ public class EmployeeServices implements Employee {
             int count=0;
             row=br.readLine();
             if((pageNo-1)*pageSize>=0 && (pageNo-1)*pageSize<=100000) {
-
-
                 for (int i = 0; i < (pageNo - 1) * pageSize; i++)
                     row = br.readLine();
 
@@ -35,9 +36,12 @@ public class EmployeeServices implements Employee {
                     count++;
                 }
             }
+
         }
         catch(Exception e){
             e.printStackTrace();
+            log.info("ERROR OCCURRED IN TRY SECTION OF FETCH DATA"+ e);
+
         }
         return Empdata;
     }
