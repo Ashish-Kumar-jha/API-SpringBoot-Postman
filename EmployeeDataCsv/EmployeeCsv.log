@@ -1,14 +1,40 @@
-2021-07-22 13:49:41.826  INFO 11464 --- [main] c.k.e.E.EmployeeDataCsvApplication       : Starting EmployeeDataCsvApplication using Java 16.0.1 on DESKTOP-77BAA22 with PID 11464 (E:\Personal Git Hub\Ksolves Assignment API\EmployeeDataCsv\target\classes started by Para SF in E:\Personal Git Hub\Ksolves Assignment API\EmployeeDataCsv)
-2021-07-22 13:49:41.842  INFO 11464 --- [main] c.k.e.E.EmployeeDataCsvApplication       : No active profile set, falling back to default profiles: default
-2021-07-22 13:49:45.074  INFO 11464 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-07-22 13:49:45.100  INFO 11464 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-07-22 13:49:45.131  INFO 11464 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.48]
-2021-07-22 13:49:45.381  INFO 11464 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-07-22 13:49:45.381  INFO 11464 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3318 ms
-2021-07-22 13:49:46.383  INFO 11464 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2021-07-22 13:49:46.415  INFO 11464 --- [main] c.k.e.E.EmployeeDataCsvApplication       : Started EmployeeDataCsvApplication in 6.247 seconds (JVM running for 7.574)
-2021-07-22 13:50:05.977  INFO 11464 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-07-22 13:50:05.978  INFO 11464 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-07-22 13:50:05.981  INFO 11464 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-07-22 13:50:06.195  INFO 11464 --- [http-nio-8080-exec-1] c.k.e.E.Controllers.EmployeeController   : INSIDE CONTROLLER -- /fetchData 
-2021-07-22 13:50:06.202  INFO 11464 --- [http-nio-8080-exec-1] c.k.e.E.Servicees.EmployeeServices       : INSIDE SERVICE CLASS -- FETCH DATA
+2021-07-25 14:28:57.996  INFO 6184 --- [main] c.k.e.E.EmployeeDataCsvApplication       : Starting EmployeeDataCsvApplication using Java 16.0.1 on DESKTOP-77BAA22 with PID 6184 (E:\Personal Git Hub\Ksolves Assignment API\EmployeeDataCsv\target\classes started by Para SF in E:\Personal Git Hub\Ksolves Assignment API\EmployeeDataCsv)
+2021-07-25 14:28:58.186  INFO 6184 --- [main] c.k.e.E.EmployeeDataCsvApplication       : No active profile set, falling back to default profiles: default
+2021-07-25 14:29:02.171  INFO 6184 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-07-25 14:29:02.203  INFO 6184 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-07-25 14:29:02.294  INFO 6184 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.48]
+2021-07-25 14:29:02.642  INFO 6184 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-07-25 14:29:02.643  INFO 6184 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3903 ms
+2021-07-25 14:29:03.922  INFO 6184 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-07-25 14:29:03.950  INFO 6184 --- [main] c.k.e.E.EmployeeDataCsvApplication       : Started EmployeeDataCsvApplication in 7.641 seconds (JVM running for 9.987)
+2021-07-25 14:31:14.475  INFO 15792 --- [main] c.k.e.E.EmployeeDataCsvApplication       : Starting EmployeeDataCsvApplication using Java 16.0.1 on DESKTOP-77BAA22 with PID 15792 (E:\Personal Git Hub\Ksolves Assignment API\EmployeeDataCsv\target\classes started by Para SF in E:\Personal Git Hub\Ksolves Assignment API\EmployeeDataCsv)
+2021-07-25 14:31:14.522  INFO 15792 --- [main] c.k.e.E.EmployeeDataCsvApplication       : No active profile set, falling back to default profiles: default
+2021-07-25 14:31:17.737  INFO 15792 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-07-25 14:31:17.765  INFO 15792 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-07-25 14:31:17.766  INFO 15792 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.48]
+2021-07-25 14:31:18.094  INFO 15792 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-07-25 14:31:18.095  INFO 15792 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3346 ms
+2021-07-25 14:31:19.119  INFO 15792 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-07-25 14:31:19.155  INFO 15792 --- [main] c.k.e.E.EmployeeDataCsvApplication       : Started EmployeeDataCsvApplication in 6.35 seconds (JVM running for 9.009)
+2021-07-25 14:31:32.177  INFO 15792 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-07-25 14:31:32.178  INFO 15792 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-07-25 14:31:32.180  INFO 15792 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-07-25 14:31:43.617  WARN 15792 --- [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2021-07-25 14:33:40.707  INFO 15792 --- [http-nio-8080-exec-9] c.k.e.E.Controllers.EmployeeController   : INSIDE CONTROLLER -- /fetchData 
+2021-07-25 14:33:40.708  INFO 15792 --- [http-nio-8080-exec-9] c.k.e.E.Servicees.EmployeeServices       : INSIDE SERVICE CLASS -- FETCH DATA
+2021-07-25 14:33:40.757  INFO 15792 --- [http-nio-8080-exec-9] c.k.e.E.Servicees.EmployeeServices       : ERROR OCCURRED IN TRY SECTION OF FETCH DATAjava.lang.ArrayIndexOutOfBoundsException: Index 0 out of bounds for length 0
+2021-07-25 14:34:55.954  INFO 13468 --- [main] c.k.e.E.EmployeeDataCsvApplication       : Starting EmployeeDataCsvApplication using Java 16.0.1 on DESKTOP-77BAA22 with PID 13468 (E:\Personal Git Hub\Ksolves Assignment API\EmployeeDataCsv\target\classes started by Para SF in E:\Personal Git Hub\Ksolves Assignment API\EmployeeDataCsv)
+2021-07-25 14:34:55.963  INFO 13468 --- [main] c.k.e.E.EmployeeDataCsvApplication       : No active profile set, falling back to default profiles: default
+2021-07-25 14:34:58.879  INFO 13468 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-07-25 14:34:58.937  INFO 13468 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-07-25 14:34:58.937  INFO 13468 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.48]
+2021-07-25 14:34:59.253  INFO 13468 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-07-25 14:34:59.254  INFO 13468 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3089 ms
+2021-07-25 14:35:00.349  INFO 13468 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-07-25 14:35:00.372  INFO 13468 --- [main] c.k.e.E.EmployeeDataCsvApplication       : Started EmployeeDataCsvApplication in 6.484 seconds (JVM running for 8.717)
+2021-07-25 14:35:08.065  INFO 13468 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-07-25 14:35:08.066  INFO 13468 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-07-25 14:35:08.068  INFO 13468 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-07-25 14:35:08.779  INFO 13468 --- [http-nio-8080-exec-2] c.k.e.E.Controllers.EmployeeController   : INSIDE CONTROLLER -- /fetchData 
+2021-07-25 14:35:08.780  INFO 13468 --- [http-nio-8080-exec-2] c.k.e.E.Servicees.EmployeeServices       : INSIDE SERVICE CLASS -- FETCH DATA
+2021-07-25 14:35:08.792  INFO 13468 --- [http-nio-8080-exec-2] c.k.e.E.Servicees.EmployeeServices       : ERROR OCCURRED IN TRY SECTION OF FETCH DATAjava.lang.ArrayIndexOutOfBoundsException: Index 0 out of bounds for length 0
