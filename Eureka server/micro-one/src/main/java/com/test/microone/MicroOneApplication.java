@@ -13,28 +13,7 @@ public class MicroOneApplication {
 	static Logger logger = LoggerFactory.getLogger(MicroOneApplication.class);
 	public static void main(String[] args) throws InterruptedException {
 		SpringApplication.run(MicroOneApplication.class, args);
-		/*
-		 * for(int i =0;i <100000; i++) { logger.info(
-		 * "test-------------------------------------------------------------------------------"
-		 * ); logger.info(
-		 * "test-------------------------------------------------------------------------------"
-		 * ); logger.info(
-		 * "test-------------------------------------------------------------------------------"
-		 * ); logger.info(
-		 * "test-------------------------------------------------------------------------------"
-		 * ); logger.info(
-		 * "test-------------------------------------------------------------------------------"
-		 * ); logger.info(
-		 * "test-------------------------------------------------------------------------------"
-		 * ); logger.info(
-		 * "test-------------------------------------------------------------------------------"
-		 * ); logger.info(
-		 * "test-------------------------------------------------------------------------------"
-		 * ); logger.info(
-		 * "test-------------------------------------------------------------------------------"
-		 * ); logger.info("test"); logger.info("test"); logger.info("test");
-		 * Thread.sleep(2000); }
-		 */
+
 	}
 
 }

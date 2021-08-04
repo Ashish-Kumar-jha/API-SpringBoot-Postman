@@ -1,0 +1,32 @@
+#spring:
+#  application:
+#    name: Gateway
+#  main.banner-mode: off
+#  autoconfigure:
+#    exclude:
+#      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+#server:
+#  port: 8080
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+#  instance:
+#    preferIpAddress: true
+#
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: Micro-One
+          uri: http://localhost:5051/
+          predicates:
+            - Path=/One/**
+        - id: Micro-Two
+          uri: http://localhost:5002/
+          predicates:
+            - Path=/Two/**
+        - id: Micro-Three
+          uri: http://localhost:5003/
+          predicates:
+            - Path=/Three/**

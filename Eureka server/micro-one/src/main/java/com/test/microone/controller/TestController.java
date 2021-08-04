@@ -15,21 +15,26 @@ import com.test.microone.model.User;
 
 /**
  * 
- * @author Ravi Thapa
+ * @author Ashish Jha
  *
  */
 
 @CrossOrigin("*")
 @RestController()
-@RequestMapping("/api/v1")
+@RequestMapping("/One")
 public class TestController {
 	Logger logger = LogManager.getLogger(TestController.class);
 	
-	@GetMapping(value = "/test")
+	@GetMapping(value = "/test1")
 	public ResponseEntity<?> getTestMessage() {
 		User user = new User();
-		user.setId(101);
-		user.setName("Ravi");
-		return new ResponseEntity<>(user, HttpStatus.OK);	}
+		user.setId(11708214);
+		user.setName("ASHISH KUMAR JHA");
+		return new ResponseEntity<>(user, HttpStatus.OK);
+	}
 
+@GetMapping("/cone")
+	public String check(){
+		return "MICRO CONTROLLER 1 INVOCKED";
+}
 }
