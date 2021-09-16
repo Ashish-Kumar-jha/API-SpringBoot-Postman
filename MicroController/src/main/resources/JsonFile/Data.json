@@ -1,0 +1,38 @@
+[
+  {
+    "ind": 0,
+    "guid": "228cb3c8-fb04-4792-b23f-50e26c40738f",
+    "isAct": "false"
+  },
+  {
+    "ind": 1,
+    "guid": "33e6240c-214e-49a2-96c7-68392530c51b",
+    "isAct": "true"
+  },
+  {
+
+    "ind": 2,
+    "guid": "0f7ed622-2edb-47bc-be2f-8d8399aca0c4",
+    "isAct": "false"
+  },
+  {
+    "ind": 3,
+    "guid": "1c4aa3e9-7e3c-4783-a360-7c2240ad9657",
+    "isAct": "false"
+  },
+  {
+    "ind": 4,
+    "guid": "b8d58d8d-560a-44f0-88b1-debaed459ff8",
+    "isAct": "true"
+  },
+  {
+    "ind": 5,
+    "guid": "a7bfdac2-6524-4994-bf3d-ba3a6cbc3f8f",
+    "isAct": "true"
+  },
+  {
+    "ind": 6,
+    "guid": "7460876e-a383-4547-837e-6ba4744b9aea",
+    "isAct": "false"
+  }
+]

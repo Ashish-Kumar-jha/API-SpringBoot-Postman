@@ -14,7 +14,7 @@
 	<name>HotelSystem</name>
 	<description> hotel system manages information about staff, rooms, reservations, customers, customer service (food deliver in rooms) and customer billing.   Prepare a document listing the APIs and functionalities you are going to cover.   State your assumptions as needed. Staff management Room Booking Customer Orders Invoice systems</description>
 	<properties>
-		<java.version>16</java.version>
+		<java.version>1.8</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -50,6 +50,12 @@
 			<artifactId>spring-boot-starter-validation</artifactId>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/net.sf.jasperreports/jasperreports -->
+		<dependency>
+			<groupId>net.sf.jasperreports</groupId>
+			<artifactId>jasperreports</artifactId>
+			<version>6.17.0</version>
+		</dependency>
 
 
 
