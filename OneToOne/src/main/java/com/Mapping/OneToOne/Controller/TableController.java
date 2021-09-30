@@ -8,6 +8,8 @@ import com.Mapping.OneToOne.Service.TableInter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 public class TableController {
 
@@ -33,4 +35,9 @@ public class TableController {
     return "deleted";
 
 }
+@GetMapping("/getdata")
+    public List<Table1> getdata(){
+    return table1Dao.findAll();
+}
+
 }
