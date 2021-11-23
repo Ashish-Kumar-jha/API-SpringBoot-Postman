@@ -40,4 +40,11 @@ public class MongoImpl implements  MongoInter{
     public List<CrudOperation> startwith(char name) {
         return this.mongoDao.startswith(name);
     }
+
+    @Override
+    public int sumdata(int a, int b) {
+        return a+b;
+    }
+
+
 }

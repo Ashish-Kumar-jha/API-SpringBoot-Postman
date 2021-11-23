@@ -11,6 +11,11 @@ import java.util.List;
 public class MongoController {
     @Autowired
     MongoInter mongoInter;
+
+    @GetMapping("/sumdata/{a}/{b}")
+    public int sumtwo(@PathVariable int a, @PathVariable int b){
+        return this.mongoInter.sumdata(a,b);
+    }
     @PostMapping("/save")
     public CrudOperation savedata(@RequestBody CrudOperation crudOperation){
         return this.mongoInter.savedata(crudOperation);
@@ -34,3 +39,27 @@ public class MongoController {
         this.mongoInter.deleterow(id);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

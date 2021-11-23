@@ -9,10 +9,8 @@ public interface MongoInter {
     public CrudOperation savedata(CrudOperation crudOperation);
 
     public List<CrudOperation> getdata();
-
-   public List<CrudOperation> greaterage(int age);
-
-   public void deleterow(int id);
-
+    public List<CrudOperation> greaterage(int age);
+    public void deleterow(int id);
     public List<CrudOperation> startwith(char name);
+    public int sumdata(int a, int b);
 }

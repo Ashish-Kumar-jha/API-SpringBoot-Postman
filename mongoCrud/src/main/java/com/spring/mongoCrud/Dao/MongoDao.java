@@ -5,7 +5,6 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 
 import java.util.List;
-
 public interface MongoDao extends MongoRepository<CrudOperation,Integer> {
 
 //GREATER THAN EQUALS TO VALUE
